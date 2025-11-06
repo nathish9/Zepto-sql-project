@@ -1,40 +1,39 @@
 # Zepto-sql-project
 SQL Data Analysis project using PostgreSQL and Zepto dataset
 Project Workflow
-Here’s a step-by-step breakdown of what we do in this project:
+Here’s a step-by-step breakdown of what we do in this project
 
-1. Database & Table Creation
-We start by creating a SQL table with appropriate data types:
+This project explores a **real-world e-commerce dataset** from Zepto using **PostgreSQL** and **pgAdmin**.  
+It simulates how data analysts in the retail industry clean, organize, and extract insights from messy, real-life product data.  
 
-CREATE TABLE zepto (
-  sku_id SERIAL PRIMARY KEY,
-  category VARCHAR(120),
-  name VARCHAR(150) NOT NULL,
-  mrp NUMERIC(8,2),
-  discountPercent NUMERIC(5,2),
-  availableQuantity INTEGER,
-  discountedSellingPrice NUMERIC(8,2),
-  weightInGms INTEGER,
-  outOfStock BOOLEAN,
-  quantity INTEGER
-);
-2. Data Import
-Loaded CSV using pgAdmin's import feature.
-3. 🔍 Data Exploration
-Counted the total number of records in the dataset
+ 🧠 Project Overview
+I analyzed product inventory data to uncover patterns in **pricing, stock availability, and discounts** — similar to what a data analyst would do in an e-commerce company.
 
-Viewed a sample of the dataset to understand structure and content
+ ⚙️ What I Did
+- 📥 Imported raw CSV data into **PostgreSQL** using **pgAdmin**
+- 🧹 Cleaned and formatted data (handled nulls, removed invalid values, standardized pricing)
+- 🔍 Explored product categories, MRP ranges, and stock status
+- 💡 Derived **business insights**, including:
+  - 💰 *High-MRP out-of-stock products*
+  - 📊 *Estimated potential revenue by product category*
+  - 🏷️ *Top discounted items and best value products*
 
-Checked for null values across all columns
+ 🧰 Tools & Technologies
+**PostgreSQL** | **pgAdmin** | **SQL** | **Kaggle Dataset**
 
-Identified distinct product categories available in the dataset
+ 📂 File Information
+- `zepto_project.sql` → contains all SQL queries for:
+  - Database & table creation  
+  - Data import and cleaning  
+  - Exploratory Data Analysis (EDA)  
+  - Business-driven insights  
 
-Compared in-stock vs out-of-stock product counts
+ 📈 Key Learning
+This project helped me strengthen my SQL skills, especially:
+- Writing **aggregate queries** with `GROUP BY`, `HAVING`, and `ORDER BY`
+- Handling **real-world data inconsistencies**
+- Deriving **actionable business insights** from structured data  
 
-Detected products present multiple times, representing different SKUs
 
-4. 🧹 Data Cleaning
-Identified and removed rows where MRP or discounted selling price was zero
 
-Converted mrp and discountedSellingPrice from paise to rupees for consistency and readability
 
